@@ -3,29 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
-    <!-- C'est ici qu'on va lier la feuille de style -->
+    <title>Présentation</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 2px solid #eaeaea;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        /* Organisation côte à côte : contenu à gauche, nav à droite */
+        .layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        main {
+            flex: 1; /* Le contenu occupe tout l'espace disponible */
+        }
+
+        nav {
+            width: 220px; /* Largeur fixe pour la barre latérale */
+            border-left: 2px solid #eaeaea;
+            padding-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#projets">Projets</a></li>
-            </ul>
-        </nav>
+        <h1>Mon Site Personnel</h1>
     </header>
 
-    <main>
-        <section id="accueil">
-            <h1>Bienvenue</h1>
-            <p>Ceci est la première page de mon site.</p>
-        </section>
-    </main>
+    <div class="layout">
+        <main>
+            <h2>À propos de moi</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
+            
+            <p>Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet quam. Duis facilisis dui id quam. Phasellus odio in hac habitasse platea dictumst.</p>
+            
+            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+        </main>
 
-    <footer>
-        <p>&copy; 2026 - Mon Site</p>
-    </footer>
+        <nav>
+            <h3>Pages</h3>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="parcours.html">Mon Parcours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
 </body>
 </html>
